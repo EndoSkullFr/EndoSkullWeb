@@ -1,7 +1,7 @@
 @extends("default")
 @section('title', "EndoSkull")
 
-<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="{{ asset("css/home.css")}}">
 @section('content')
     <div class="youtube">
         <div class="youtube-bg">

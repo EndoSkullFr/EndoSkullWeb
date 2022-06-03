@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\WikiController;
+use App\Http\Controllers\WikiPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,9 @@ Route::get('twitter', function () {
     return redirect('https://twitter.com/EndoSkullMC');
 });
 Route::get("wiki", [WikiController::class, 'home']);
+
+Route::get("wiki/{category}", [WikiController::class, 'category']);
+Route::get("wiki/{category}/{page}", [WikiController::class, 'page']);
 /*
 Route::get("salut/{name}", function ($name) {
     return "Salut $name";

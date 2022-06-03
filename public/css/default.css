@@ -1,14 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: 500;
 }
 a {
     text-decoration: none;
 }
 .head {
-    background: #1d1b1c;
+    background: #0B090A;
     margin: 0;
     display: flex;
     justify-content: space-between;
@@ -26,19 +26,20 @@ a {
     color: white;
 }
 .nav a:hover {
-    color: #aa2626;
+    color: #A4161A;
     transition: color .5s;
 }
 a.shop {
     font-weight: 700;
-    color: #181414;
-    background: #aa2626;
+    color: #0B090A;
+    background: #A4161A;
     border-radius: 10em;
-    transition: background .5s;
+    transition: background-color .5s;
 }
 a.shop:hover {
-    background: #952929;
-    color: #181414;
+    background: #BA181B;
+    color: #0B090A;
+    transition: background-color .5s;
 }
 .head-img {
     flex: 1 1 0px;
@@ -49,7 +50,7 @@ a.shop:hover {
     width: 90%;
 }
 .ip {
-    flex: 1 1 0px;
+    flex: 1 1 0;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -83,7 +84,7 @@ a.shop:hover {
     display: flex;
     align-items: center;
     align-content: center;
-    background: rgba(255, 0, 0, .2);
+    background: rgba(255, 0, 0, .3);
 }
 .home-content {
     display: flex;
@@ -133,7 +134,7 @@ a.shop:hover {
     justify-content: center;
     justify-items: center;
     height: 150px;
-    background: #181414;
+    background: #0B090A;
 }
 .media a {
     color: black;
@@ -193,20 +194,20 @@ a.shop:hover {
 .transition {
     height: 50px;
     background: #181414;
-    background: linear-gradient(180deg, #181414 0%, rgba(38,38,38,1) 100%);
+    background: linear-gradient(180deg, #0B090A 0%, #161A1D 100%);
 }
 .transition-reverse {
     height: 50px;
     background: rgb(38,38,38);
-    background: linear-gradient(180deg, rgba(38,38,38,1) 0%, #181414 100%);
+    background: linear-gradient(180deg, #161A1D 0%, #0B090A 100%);
 }
 .content {
     width: 100%;
-    background: #262626;
+    background: #161A1D;
     padding: 50px 0;
 }
 .foot {
-    background: #181414;
+    background: #0B090A;
     color: white;
     padding: 40px 0;
 }
@@ -219,10 +220,7 @@ a.shop:hover {
     min-width: 20%;
     margin: 0 auto;
     border-radius: 1em;
-    background: rgba(0,0,0,.6);
+    background: #161A1D;
     padding: 10px;
-    background-image: url("/img/EndoSkull-01.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    color: #E5383B;
 }

@@ -1,7 +1,7 @@
 @extends("default")
 @section('title', "Wiki")
 
-<link rel="stylesheet" href="css/wiki_home.css">
+<link rel="stylesheet" href="{{ asset("css/wiki_home.css")}}">
 @section('content')
     <div class="wiki-categories">
         @foreach($categories as $category)

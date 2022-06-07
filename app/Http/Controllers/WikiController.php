@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\WikiCategory;
 use App\Models\WikiPage;
+use Illuminate\Support\Facades\Auth;
 use xPaw\MinecraftPing;
 use xPaw\MinecraftPingException;
 
@@ -18,27 +19,26 @@ class WikiController extends Controller
     public function home()
     {
 
-        return view("wiki_home", ['categories' => WikiCategory::all()]);
+        return view("wiki.wiki_home", ['categories' => WikiCategory::all()]);
     }
 
-    public function category($category)
+    public function category($slug)
     {
-
-        $pages = WikiPage::where('category', $category)->get();
-        if (count(WikiCategory::where('slug', $category)->get()) == 0) {
+        if (count(WikiCategory::where('slug', $slug)->get()) == 0) {
             abort(404);
         }
-        $category = WikiCategory::where('slug', $category)->get()[0];
-        return view("wiki_category", ['pages' => $pages, 'category' => $category]);
+        $category = WikiCategory::where('slug', $slug)->get()[0];
+        $pages = WikiPage::where('category', $category['id'])->get();
+        return view("wiki.wiki_category", ['pages' => $pages, 'category' => $category]);
     }
 
-    public function page($category, $page)
+    public function page($slug)
     {
 
-        if (count(WikiPage::where('category', $category)->where('slug', $page)->get()) == 0) {
+        if (count(WikiPage::where('slug', $slug)->get()) == 0) {
             abort(404);
         }
-        $page = WikiPage::where('category', $category)->get()[0];
-        return view("wiki_page", ['page' => $page, 'category' => $category]);
+        $page = WikiPage::where('slug', $slug)->get()[0];
+        return view("wiki.wiki_page", ['page' => $page]);
     }
 }

@@ -7,7 +7,7 @@
 @section('content')
     <div class="wiki-categories">
         @foreach($pages as $page)
-            <a href="/wiki/{{ $category['slug'] }}/{{ $page['slug'] }}">
+            <a href="/wiki/page/{{ $page['slug'] }}">
                 <div class="wiki-category-small">
                     <div class="wiki-text">
                         <h3 class="wiki-name">{{ $page['name'] }}</h3>

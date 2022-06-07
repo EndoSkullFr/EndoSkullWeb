@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string("name")->unique();
             $table->string("slug")->unique();
-            $table->string("category");
+            $table->integer("category");
             $table->longText("content");
             $table->timestamps();
         });
@@ -26,14 +26,14 @@ return new class extends Migration
             array(
                 'name' => 'Le Goulag',
                 'slug' => 'goulag',
-                'category' => 'bedwars',
+                'category' => 3,
                 'content' => "Qu'est-ce que le goulag ?
 Le goulag vous redonne une seconde chance lorsque vous vous faîtes final kill pour être ressucité.
 Cependant il n'est accessible qu'une seule fois.
 Le goulag se ferme automatiquement au bout de 10 minutes ou lorsqu'il ne reste que 2 joueurs restants
 Dedans tout le monde dispose du même stuff, les améliorations obtenues dans la partie n'ont donc pas d'influance sur celui-ci.
 Lorsqu'une partie dure trop longtemps, le goulag va se réouvrir et tous les joueurs y seront envoyés.
-img:https://endoskullweb.test/img/background.png
+img:/img/background.png
 L'amélioration 'Avantage décisif' permet d'avoir l'enchantement sharpness I sur votre hache lors de celui-ci"
             )
         );
@@ -41,7 +41,7 @@ L'amélioration 'Avantage décisif' permet d'avoir l'enchantement sharpness I su
             array(
                 'name' => 'Système de regen',
                 'slug' => 'regen',
-                'category' => 'pvpkit',
+                'category' => 2,
                 'content' => "Blabla tu regen"
             )
         );

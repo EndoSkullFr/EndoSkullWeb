@@ -30,7 +30,11 @@ class HomeController extends Controller
         {
             $Query = new MinecraftPing( 'mc.endoskull.fr', 25565 );
 
-            $online_count = $Query->Query()["players"]["online"];
+            $result = $Query->Query();
+            if ($result == false) {
+                return 0;
+            }
+            $online_count = $result["players"]["online"];
         }
         catch( MinecraftPingException $e )
         {

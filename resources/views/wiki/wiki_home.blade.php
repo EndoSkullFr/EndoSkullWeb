@@ -5,7 +5,7 @@
 @section('content')
     <div class="wiki-categories">
         @foreach($categories as $category)
-            <a href="/wiki/{{ $category['slug'] }}">
+            <a href="/wiki/category/{{ $category['slug'] }}">
                 <div class="wiki-category">
                     <img class="wiki-image" src="{{ $category['icon'] }}" alt="{{ $category['name'] }}">
                     <div class="wiki-text">
